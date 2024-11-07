@@ -1,3 +1,4 @@
+
 # Stock_App: Real-Time Stock Price Streaming Application
 
 ## Overview
@@ -7,15 +8,10 @@ Stock_App is a sophisticated real-time stock price streaming application designe
 ## Key Features
 
 1. **Real-Time Data Streaming**: Establishes a two-way WebSocket connection between the frontend and backend, allowing for real-time updates of stock prices.
-
 2. **Web Worker Utilization**: The frontend employs a web worker to handle incoming data from the backend, ensuring the main thread remains responsive.
-
 3. **Throttling Mechanism**: Implements throttling in the web worker to control the frequency of updates sent to the main thread, enhancing UI performance.
-
 4. **Dynamic Stock List**: Users can view and select stocks to track, with data fetched from a JSON file in the backend.
-
 5. **Error Handling**: Designed to handle errors and disconnections from the WebSocket connection, providing appropriate feedback to users.
-
 6. **TypeScript Implementation**: The entire application is built using TypeScript, ensuring type safety and improving code quality.
 
 ## Project Structure
