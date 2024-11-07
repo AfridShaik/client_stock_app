@@ -1,0 +1,287 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stock-list {
+  margin: 20px 0;
+}
+
+.stock-list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 15%;
+}
+
+.stock-list li {
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin: 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.stock-list input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.stock-list label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stock-prices table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.stock-prices th,
+.stock-prices td {
+  padding: 12px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.stock-prices th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.stock-prices tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.stock-prices tr:hover {
+  background-color: #f0f0f0;
+}
+
+.stock-prices td:last-child {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buy-sell-btn,
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  min-width: 60px;
+}
+
+.buy-btn {
+  background-color: green;
+}
+
+.sell-btn {
+  background-color: blue;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: auto;
+  min-width: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .stock-prices th,
+  .stock-prices td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .buy-sell-btn,
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 50px;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.price-up {
+  color: green;
+}
+
+.price-down {
+  color: red;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.card-body {
+  font-size: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.stock-selection {
+    width: 30%;
+    padding-right: 20px;
+}
+
+.stock-prices {
+    width: 70%;
+    margin-left: 30px;
+    margin-right: 320px;
+}
+
+.stock-prices table {
+    width: 100%;
+}
+
+.buy-sell-btn {
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 60px;
+    
+}
+
+.buy-btn {
+    background-color: green;
+}
+
+.sell-btn {
+    background-color: blue;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: auto;
+    min-width: 60px;
+}
+
+.portfolio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.stock-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stock-details p {
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
